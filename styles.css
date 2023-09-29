@@ -1,0 +1,52 @@
+div {
+  min-width: 100px;
+  min-height: 100px;
+  padding: 30px;
+  border: 1px solid black;
+}
+#statement {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(146, 233, 5, 0.774);
+}
+
+h1 {
+  color: rgba(241, 31, 15, 0.671);
+}
+
+#btn-click {
+  background-color: rgb(11, 25, 146);
+  color: rgb(184, 187, 18);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#grandparent, #parent, #child {
+  border: 1px solid rgba(9, 13, 241, 0.938);
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#category li {
+  cursor: pointer;
+}
+
+#statement {
+  font-weight: bold;
+  margin-top: 10px;
+}

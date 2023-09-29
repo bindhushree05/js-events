@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+   
+<h1> <span id="user"></span></h1>
+<script>
+  window.onload = function() {
+    document.getElementById("user").innerHTML = " Bindhu shree";
+  };
+</script>
+    <h1>Hello <span id="user"></span>!!</h1>
+
+<button id="btn-click">change</button>
+<script>
+  document.getElementById("btn-click").onclick = function() {
+    this.style.backgroundColor = "yellow";
+  };
+</script>
+
+<h1>Make sentence</h1>
+<ul>
+  <li>Noun: <input type="text" id="noun" /></li>
+  <li>Verb: <input type="text" id="verb" /></li>
+  <li>Adverb: <input type="text" id="adverb" /></li>
+</ul>
+<button id="build-button">Create a sentence !!</button>
+<div id="statement"></div>
+<script>
+  document.getElementById("build-button").addEventListener("click", function() {
+    var noun = document.getElementById("noun").value;
+    var verb = document.getElementById("verb").value;
+    var adverb = document.getElementById("adverb").value;
+    var sentence = noun + " " + verb + " " + adverb;
+    document.getElementById("statement").innerHTML = sentence;
+  });
+</script>
+
+<div id="grandparent">
+Grandparent
+<div id="parent">
+  Parent
+  <div id="child">Child</div>
+</div>
+</div>
+<script>
+document.getElementById("child").addEventListener("click", function() {
+  alert("Child clicked");
+});
+
+document.getElementById("parent").addEventListener("click", function() {
+  alert("Parent clicked");
+});
+
+document.getElementById("grandparent").addEventListener("click", function() {
+  alert("Grandparent clicked");
+});
+</script>
+
+<div id="grandparent">
+Grandparent
+<div id="parent">
+  Parent
+  <div id="child">Child</div>
+</div>
+</div>
+<script>
+document.getElementById("grandparent").addEventListener("click", function() {
+  alert("Grandparent clicked");
+}, true);
+
+document.getElementById("parent").addEventListener("click", function() {
+  alert("Parent clicked");
+}, true);
+
+document.getElementById("child").addEventListener("click", function() {
+  alert("Child clicked");
+}, true);
+</script>
+
+<div>
+<ul id="category">
+  <li id="shirts">shirts</li>
+  <li id="pants">pants</li>
+  <li id="blazers">blazers</li>
+</ul>
+</div>
+<script>
+document.getElementById("category").addEventListener("click", function(event) {
+  if(event.target.id === "blazers") {
+    alert("blazers");
+  }
+});
+</script>
+    <script src="./script.js"></script>
+  </body>
+</html>
